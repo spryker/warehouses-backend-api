@@ -30,9 +30,6 @@ class WarehousesBackendApiTester extends Actor
 {
     use _generated\WarehousesBackendApiTesterActions;
 
-    /**
-     * @return \Spryker\Glue\WarehousesBackendApi\WarehousesBackendApiResourceInterface
-     */
     public function getResource(): WarehousesBackendApiResourceInterface
     {
         return $this->getLocator()->warehousesBackendApi()->resource();

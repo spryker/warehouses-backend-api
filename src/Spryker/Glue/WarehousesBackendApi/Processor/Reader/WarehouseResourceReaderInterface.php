@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\WarehouseResourceCollectionTransfer;
 
 interface WarehouseResourceReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StockCriteriaTransfer $stockCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseResourceCollectionTransfer
-     */
     public function getWarehouseResourceCollection(StockCriteriaTransfer $stockCriteriaTransfer): WarehouseResourceCollectionTransfer;
 }

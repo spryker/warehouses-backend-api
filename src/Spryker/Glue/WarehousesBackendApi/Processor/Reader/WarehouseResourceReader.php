@@ -24,10 +24,6 @@ class WarehouseResourceReader implements WarehouseResourceReaderInterface
      */
     protected WarehouseResourceMapperInterface $warehouseResourceMapper;
 
-    /**
-     * @param \Spryker\Glue\WarehousesBackendApi\Dependency\Facade\WarehousesBackendApiToStockFacadeInterface $stockFacade
-     * @param \Spryker\Glue\WarehousesBackendApi\Processor\Mapper\WarehouseResourceMapperInterface $warehouseResourceMapper
-     */
     public function __construct(
         WarehousesBackendApiToStockFacadeInterface $stockFacade,
         WarehouseResourceMapperInterface $warehouseResourceMapper
@@ -36,11 +32,6 @@ class WarehouseResourceReader implements WarehouseResourceReaderInterface
         $this->warehouseResourceMapper = $warehouseResourceMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StockCriteriaTransfer $stockCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseResourceCollectionTransfer
-     */
     public function getWarehouseResourceCollection(StockCriteriaTransfer $stockCriteriaTransfer): WarehouseResourceCollectionTransfer
     {
         $stockCollectionTransfer = $this->stockFacade->getStockCollection($stockCriteriaTransfer);

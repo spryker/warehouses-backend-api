@@ -19,9 +19,6 @@ use Spryker\Glue\WarehousesBackendApi\Processor\Reader\WarehouseResourceReaderIn
  */
 class WarehousesBackendApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\WarehousesBackendApi\Processor\Reader\WarehouseResourceReaderInterface
-     */
     public function createWarehouseResourceReader(): WarehouseResourceReaderInterface
     {
         return new WarehouseResourceReader(
@@ -30,17 +27,11 @@ class WarehousesBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\WarehousesBackendApi\Processor\Mapper\WarehouseResourceMapperInterface
-     */
     public function createWarehouseResourceMapper(): WarehouseResourceMapperInterface
     {
         return new WarehouseResourceMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\WarehousesBackendApi\Dependency\Facade\WarehousesBackendApiToStockFacadeInterface
-     */
     public function getStockFacade(): WarehousesBackendApiToStockFacadeInterface
     {
         return $this->getProvidedDependency(WarehousesBackendApiDependencyProvider::FACADE_STOCK);

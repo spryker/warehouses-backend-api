@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\WarehouseResourceCollectionTransfer;
 
 interface WarehouseResourceMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StockCollectionTransfer $stockCollectionTransfer
-     * @param \Generated\Shared\Transfer\WarehouseResourceCollectionTransfer $warehouseResourceCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseResourceCollectionTransfer
-     */
     public function mapStockCollectionToWarehouseResourceCollection(
         StockCollectionTransfer $stockCollectionTransfer,
         WarehouseResourceCollectionTransfer $warehouseResourceCollectionTransfer

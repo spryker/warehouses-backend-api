@@ -37,9 +37,6 @@ class WarehousesBackendApiResourceTest extends Unit
      */
     protected WarehousesBackendApiTester $tester;
 
-    /**
-     * @return void
-     */
     public function testGetWarehouseResourceCollectionShouldReturnListOfWarehouseResources(): void
     {
         // Arrange
@@ -56,9 +53,6 @@ class WarehousesBackendApiResourceTest extends Unit
         $this->assertCount(1, $warehouseResourceCollectionTransfer->getWarehouseResources());
     }
 
-    /**
-     * @return void
-     */
     public function testGetWarehouseResourceCollectionShouldReturnCorrectResourceId(): void
     {
         // Arrange
@@ -77,9 +71,6 @@ class WarehousesBackendApiResourceTest extends Unit
         $this->assertSame($stockTransfer->getUuid(), $warehouseResource->getId());
     }
 
-    /**
-     * @return void
-     */
     public function testGetWarehouseResourceCollectionShouldReturnCorrectResourceType(): void
     {
         // Arrange
@@ -98,9 +89,6 @@ class WarehousesBackendApiResourceTest extends Unit
         $this->assertSame(static::RESOURCE_WAREHOUSES, $warehouseResource->getType());
     }
 
-    /**
-     * @return void
-     */
     public function testGetWarehouseResourceCollectionShouldReturnCorrectResourceAttributes(): void
     {
         // Arrange

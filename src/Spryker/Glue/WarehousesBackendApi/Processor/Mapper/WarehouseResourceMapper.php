@@ -16,12 +16,6 @@ use Spryker\Glue\WarehousesBackendApi\WarehousesBackendApiConfig;
 
 class WarehouseResourceMapper implements WarehouseResourceMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StockCollectionTransfer $stockCollectionTransfer
-     * @param \Generated\Shared\Transfer\WarehouseResourceCollectionTransfer $warehouseResourceCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseResourceCollectionTransfer
-     */
     public function mapStockCollectionToWarehouseResourceCollection(
         StockCollectionTransfer $stockCollectionTransfer,
         WarehouseResourceCollectionTransfer $warehouseResourceCollectionTransfer
@@ -35,12 +29,6 @@ class WarehouseResourceMapper implements WarehouseResourceMapperInterface
         return $warehouseResourceCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StockTransfer $stockTransfer
-     * @param \Generated\Shared\Transfer\GlueResourceTransfer $glueResourceTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResourceTransfer
-     */
     protected function mapStockTransferToGlueResourceTransfer(
         StockTransfer $stockTransfer,
         GlueResourceTransfer $glueResourceTransfer
@@ -56,12 +44,6 @@ class WarehouseResourceMapper implements WarehouseResourceMapperInterface
             ->setAttributes($warehousesBackendApiAttributesTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StockTransfer $stockTransfer
-     * @param \Generated\Shared\Transfer\WarehousesBackendApiAttributesTransfer $warehousesBackendApiAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehousesBackendApiAttributesTransfer
-     */
     protected function mapStockTransferToApiWarehouseAttributesTransfer(
         StockTransfer $stockTransfer,
         WarehousesBackendApiAttributesTransfer $warehousesBackendApiAttributesTransfer
